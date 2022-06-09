@@ -34,11 +34,11 @@ module test_aes_128(clk, state, key);
 		.out(out)
 	);
 
-	initial begin
-		clk = 0;
-		state = 0;
-		key = 0;
-	end
+// 	initial begin
+// 		clk = 0;
+// 		state = 0;
+// 		key = 0;
+// 	end
        
 endmodule
 
