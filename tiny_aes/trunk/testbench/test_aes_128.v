@@ -16,12 +16,12 @@
 
 `timescale 1ns / 1ps
 
-module test_aes_128;
+module test_aes_128(clk, state, key);
 
 	// Inputs
-	reg clk;
-	reg [127:0] state;
-	reg [127:0] key;
+	input clk;
+	input [127:0] state;
+	input [127:0] key;
 
 	// Outputs
 	wire [127:0] out;
@@ -35,11 +35,7 @@ module test_aes_128;
 	);
 
 	initial begin
-		clk = 0;
-		state = 0;
-		key = 0;
 
-		#100;
         /*
          * TIMEGRP "key" OFFSET = IN 6.4 ns VALID 6 ns AFTER "clk" HIGH;
          * TIMEGRP "state" OFFSET = IN 6.4 ns VALID 6 ns AFTER "clk" HIGH;
@@ -80,6 +76,5 @@ module test_aes_128;
         $finish;
 	end
       
-    always #5 clk = ~clk;
 endmodule
 
