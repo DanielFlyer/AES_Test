@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 
-`timescale 1ns / 1ps
 
 module test_aes_128(clk, state, key);
 
