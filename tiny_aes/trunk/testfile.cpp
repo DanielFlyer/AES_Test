@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <iostream>
+#include "./object_dir/Vtest_aes_128.h"
 #include "verilated.h"
 
 int main(int argc, char **argv) {
