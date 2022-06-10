@@ -7,25 +7,42 @@ int main(int argc, char **argv) {
 	Verilated::commandArgs(argc, argv);
 
 	// Create an instance of our module under test
-	Vtb *tb = new Vtb;
-
-	// Tick the clock until we are done
-  int resetCycles = 100;
-  for(int i = 0; i < resetCycles; i++) {
-		tb->clk = 1;
-		tb->eval();    
-    tb->resetn = 0;
-		tb->clk = 0;
-		tb->eval();
-  }
-
-  int i = 0;
+	Vtest_aes_128 *test_aes_128 = new Vtest_aes_128;
+	int i = 0;
 	while( !Verilated::gotFinish() ) {
-    tb->resetn = 1;
-		tb->clk = 1;
+		rand_word_array(state, 128);
+        	rand_word_array(key, bit_num);
+		test_aes_128->clk = 1;
+		test_aes_128->state = state;
+		test_aes_128->key = key;
 		tb->eval();
 		tb->clk = 0;
 		tb->eval();
     //std::cout << "cpu_state: "+tb->__Vdly__tb__DOT__u0__DOT__u0__DOT__cpu_state << std::endl;
 	} exit(EXIT_SUCCESS);
+}
+word rand_word() {
+    word w = 0;
+    int i;
+    for(i=0; i<4; i++) {
+        word x = rand() & 255;
+        w = (w << 8) | x;
+    }
+    return w;
+}
+
+void rand_word_array(word w[], int bit_num) {
+    int word_num = bit_num / 32;
+    int i;
+    for(i=0; i<word_num; i++)
+        w[i] = rand_word();
+}
+
+void print_verilog_hex(word w[], int bit_num) {
+    int byte_num = bit_num / 8;
+    int i;
+    byte *b = (byte *)w;
+    printf("%d'h", bit_num);
+    for(i=0; i<byte_num; i++)
+        printf("%02x", b[i]);
 }
