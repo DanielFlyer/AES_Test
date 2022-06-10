@@ -1,5 +1,5 @@
-tb:tb_vlg.v
-	verilator -O3 -cc --top-module tb tb_vlg.v
+test_aes_128:./testbench/test_aes_128.v
+	verilator -O3 -cc --top-module test_aes_128 ./testbench/test_aes_128.v ./rtl/aes_128.v ./rtl/round.v ./rtl/table.v
 
 sim:./tb_cpp/tb.cpp
 	g++ -I obj_dir -I/usr/share/verilator/include -Lobj_dir ./tb_cpp/tb.cpp ./obj_dir/Vtb.cpp ./obj_dir/Vtb__Syms.cpp /usr/share/verilator/include/verilated.cpp -o tb
