@@ -19,7 +19,7 @@ module test_aes_128(clk);
 
 	// Inputs
 	input clk;
-	reg counter;
+	reg [3:0] counter;
 	reg [127:0] state;
 	reg [127:0] key;
 
