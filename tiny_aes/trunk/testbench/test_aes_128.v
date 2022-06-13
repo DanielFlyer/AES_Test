@@ -35,6 +35,9 @@ module test_aes_128(clk);
 
  	initial begin
 		out = 0;
+		state = 0;
+		key = 0;
+		@ (negedge clk);
  		state = 128'h3243f6a8_885a308d_313198a2_e0370734;
         	key   = 128'h2b7e1516_28aed2a6_abf71588_09cf4f3c;
 		if (out !== 128'h3925841d02dc09fbdc118597196a0b32)
