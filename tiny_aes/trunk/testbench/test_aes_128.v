@@ -23,7 +23,7 @@ module test_aes_128(clk);
 	reg [127:0] key;
 
 	// Outputs
-	wire [127:0] out;
+	reg [127:0] out;
 
 	// Instantiate the Unit Under Test (UUT)
 	aes_128 uut (
