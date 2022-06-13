@@ -1,2 +1,2 @@
 `verilator_config
-lint_off UNOPTFLAT
+lint_off -rule UNOPTFLAT
