@@ -4,7 +4,7 @@
 # Execute this makefile from the object directory:
 #    make -f Vtest_aes_128.mk
 
-default: Vtest_aes_128__ALL.a
+default: Vtest_aes_128
 
 ### Constants...
 # Perl executable (from $PERL)
@@ -41,9 +41,11 @@ VM_USER_LDLIBS = \
 
 # User .cpp files (from .cpp's on Verilator command line)
 VM_USER_CLASSES = \
+	testfile \
 
 # User .cpp directories (from .cpp's on Verilator command line)
 VM_USER_DIR = \
+	. \
 
 
 ### Default rules...
@@ -51,5 +53,16 @@ VM_USER_DIR = \
 include Vtest_aes_128_classes.mk
 # Include global rules
 include $(VERILATOR_ROOT)/include/verilated.mk
+
+### Executable rules... (from --exe)
+VPATH += $(VM_USER_DIR)
+
+testfile.o: testfile.cpp
+	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
+
+### Link rules... (from --exe)
+Vtest_aes_128: $(VK_USER_OBJS) $(VK_GLOBAL_OBJS) $(VM_PREFIX)__ALL.a $(VM_HIER_LIBS)
+	$(LINK) $(LDFLAGS) $^ $(LOADLIBES) $(LDLIBS) $(LIBS) $(SC_LIBS) -o $@
+
 
 # Verilated -*- Makefile -*-

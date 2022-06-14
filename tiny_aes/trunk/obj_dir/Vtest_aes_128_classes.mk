@@ -34,6 +34,12 @@ VM_CLASSES_FAST += \
 VM_CLASSES_SLOW += \
 	Vtest_aes_128___024root__Slow \
 	Vtest_aes_128___024root__DepSet_h525c4dd3__0__Slow \
+	Vtest_aes_128_one_round__Slow \
+	Vtest_aes_128_one_round__DepSet_hc6d07b2e__0__Slow \
+	Vtest_aes_128_T__Slow \
+	Vtest_aes_128_T__DepSet_ha8ff4ea2__0__Slow \
+	Vtest_aes_128_S__Slow \
+	Vtest_aes_128_S__DepSet_h931ba623__0__Slow \
 
 # Generated support classes, fast-path, compile with highest optimization
 VM_SUPPORT_FAST += \

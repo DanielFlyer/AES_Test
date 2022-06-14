@@ -12,6 +12,9 @@
 
 class Vtest_aes_128__Syms;
 class Vtest_aes_128___024root;
+class Vtest_aes_128_one_round;
+class Vtest_aes_128_S;
+
 
 // This class is the main interface to the Verilated model
 class Vtest_aes_128 VL_NOT_FINAL {
@@ -29,6 +32,71 @@ class Vtest_aes_128 VL_NOT_FINAL {
     // CELLS
     // Public to allow access to /* verilator public */ items.
     // Otherwise the application code can consider these internals.
+    Vtest_aes_128_one_round* const __PVT__test_aes_128__DOT__uut__DOT__r1;
+    Vtest_aes_128_one_round* const __PVT__test_aes_128__DOT__uut__DOT__r2;
+    Vtest_aes_128_one_round* const __PVT__test_aes_128__DOT__uut__DOT__r3;
+    Vtest_aes_128_one_round* const __PVT__test_aes_128__DOT__uut__DOT__r4;
+    Vtest_aes_128_one_round* const __PVT__test_aes_128__DOT__uut__DOT__r5;
+    Vtest_aes_128_one_round* const __PVT__test_aes_128__DOT__uut__DOT__r6;
+    Vtest_aes_128_one_round* const __PVT__test_aes_128__DOT__uut__DOT__r7;
+    Vtest_aes_128_one_round* const __PVT__test_aes_128__DOT__uut__DOT__r8;
+    Vtest_aes_128_one_round* const __PVT__test_aes_128__DOT__uut__DOT__r9;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__a1__DOT__S4_0__DOT__S_0;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__a1__DOT__S4_0__DOT__S_1;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__a1__DOT__S4_0__DOT__S_2;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__a1__DOT__S4_0__DOT__S_3;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__a2__DOT__S4_0__DOT__S_0;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__a2__DOT__S4_0__DOT__S_1;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__a2__DOT__S4_0__DOT__S_2;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__a2__DOT__S4_0__DOT__S_3;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__a3__DOT__S4_0__DOT__S_0;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__a3__DOT__S4_0__DOT__S_1;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__a3__DOT__S4_0__DOT__S_2;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__a3__DOT__S4_0__DOT__S_3;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__a4__DOT__S4_0__DOT__S_0;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__a4__DOT__S4_0__DOT__S_1;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__a4__DOT__S4_0__DOT__S_2;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__a4__DOT__S4_0__DOT__S_3;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__a5__DOT__S4_0__DOT__S_0;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__a5__DOT__S4_0__DOT__S_1;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__a5__DOT__S4_0__DOT__S_2;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__a5__DOT__S4_0__DOT__S_3;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__a6__DOT__S4_0__DOT__S_0;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__a6__DOT__S4_0__DOT__S_1;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__a6__DOT__S4_0__DOT__S_2;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__a6__DOT__S4_0__DOT__S_3;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__a7__DOT__S4_0__DOT__S_0;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__a7__DOT__S4_0__DOT__S_1;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__a7__DOT__S4_0__DOT__S_2;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__a7__DOT__S4_0__DOT__S_3;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__a8__DOT__S4_0__DOT__S_0;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__a8__DOT__S4_0__DOT__S_1;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__a8__DOT__S4_0__DOT__S_2;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__a8__DOT__S4_0__DOT__S_3;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__a9__DOT__S4_0__DOT__S_0;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__a9__DOT__S4_0__DOT__S_1;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__a9__DOT__S4_0__DOT__S_2;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__a9__DOT__S4_0__DOT__S_3;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__a10__DOT__S4_0__DOT__S_0;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__a10__DOT__S4_0__DOT__S_1;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__a10__DOT__S4_0__DOT__S_2;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__a10__DOT__S4_0__DOT__S_3;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__rf__DOT__S4_1__DOT__S_0;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__rf__DOT__S4_1__DOT__S_1;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__rf__DOT__S4_1__DOT__S_2;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__rf__DOT__S4_1__DOT__S_3;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__rf__DOT__S4_2__DOT__S_0;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__rf__DOT__S4_2__DOT__S_1;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__rf__DOT__S4_2__DOT__S_2;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__rf__DOT__S4_2__DOT__S_3;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__rf__DOT__S4_3__DOT__S_0;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__rf__DOT__S4_3__DOT__S_1;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__rf__DOT__S4_3__DOT__S_2;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__rf__DOT__S4_3__DOT__S_3;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__rf__DOT__S4_4__DOT__S_0;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__rf__DOT__S4_4__DOT__S_1;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__rf__DOT__S4_4__DOT__S_2;
+    Vtest_aes_128_S* const __PVT__test_aes_128__DOT__uut__DOT__rf__DOT__S4_4__DOT__S_3;
 
     // Root instance pointer to allow access to model internals,
     // including inlined /* verilator public_flat_* */ items.
