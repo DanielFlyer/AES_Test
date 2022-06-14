@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <iostream>
-#include "./obj_dir/Vtest_aes_128.h"
 #include "verilated.h"
+#include "./obj_dir/Vtest_aes_128.h"
 
 int main(int argc, char **argv) {
 	// Initialize Verilators variables
