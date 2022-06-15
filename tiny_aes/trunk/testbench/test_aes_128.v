@@ -18,7 +18,6 @@ module test_aes_128(clk);
 
 	// Inputs
 	input clk;
-	reg [31:0] counter;
 	reg [127:0] state;
 	reg [127:0] key;
 
@@ -35,18 +34,12 @@ module test_aes_128(clk);
 
  	initial begin
 		out = 0;
-		state = 0;
-		key = 0;
-		counter = 0;
-		if(counter == 10) begin
-			state <= 128'h3243f6a8_885a308d_313198a2_e0370734;
-        		key   <= 128'h2b7e1516_28aed2a6_abf71588_09cf4f3c;
-		end
-		if(counter == 20) begin
-			if (out !== 128'h3925841d02dc09fbdc118597196a0b32)
-          		begin $display("E"); $finish; end
-			$display("Good.");
-			$finish;
-		end
+		state = 128'h3243f6a8_885a308d_313198a2_e0370734;
+        key   = 128'h2b7e1516_28aed2a6_abf71588_09cf4f3c;
+		#1;
+		if (out !== 128'h3925841d02dc09fbdc118597196a0b32)
+          	begin $display("E"); $finish; end
+		$display("Good.");
+		$finish;
 	end
 endmodule

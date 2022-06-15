@@ -2,7 +2,7 @@
 # DESCRIPTION: Verilator output: Make include file with class lists
 #
 # This file lists generated Verilated files, for including in higher level makefiles.
-# See Vtest_aes_128.mk for the caller.
+# See Vaes_128.mk for the caller.
 
 ### Switches...
 # C11 constructs required?  0/1 (always on now)
@@ -27,26 +27,35 @@ VM_TRACE_FST_WRITER_THREAD = 0
 ### Object file lists...
 # Generated module classes, fast-path, compile with highest optimization
 VM_CLASSES_FAST += \
-	Vtest_aes_128 \
-	Vtest_aes_128___024root__DepSet_h525c4dd3__0 \
+	Vaes_128 \
+	Vaes_128___024root__DepSet_h95f529a4__0 \
+	Vaes_128___024root__DepSet_h8f9ca6bf__0 \
+	Vaes_128_one_round__DepSet_he81d5bc8__0 \
+	Vaes_128_T__DepSet_h6a819810__0 \
+	Vaes_128_T__DepSet_h049eb444__0 \
+	Vaes_128_T__DepSet_hb2f4837b__0 \
+	Vaes_128_S__DepSet_hdd9aa37a__0 \
 
 # Generated module classes, non-fast-path, compile with low/medium optimization
 VM_CLASSES_SLOW += \
-	Vtest_aes_128___024root__Slow \
-	Vtest_aes_128___024root__DepSet_h525c4dd3__0__Slow \
-	Vtest_aes_128_one_round__Slow \
-	Vtest_aes_128_one_round__DepSet_hc6d07b2e__0__Slow \
-	Vtest_aes_128_T__Slow \
-	Vtest_aes_128_T__DepSet_ha8ff4ea2__0__Slow \
-	Vtest_aes_128_S__Slow \
-	Vtest_aes_128_S__DepSet_h931ba623__0__Slow \
+	Vaes_128__ConstPool_0 \
+	Vaes_128___024root__Slow \
+	Vaes_128___024root__DepSet_h95f529a4__0__Slow \
+	Vaes_128___024root__DepSet_h8f9ca6bf__0__Slow \
+	Vaes_128_one_round__Slow \
+	Vaes_128_one_round__DepSet_h710bd915__0__Slow \
+	Vaes_128_T__Slow \
+	Vaes_128_T__DepSet_h6a819810__0__Slow \
+	Vaes_128_T__DepSet_h049eb444__0__Slow \
+	Vaes_128_S__Slow \
+	Vaes_128_S__DepSet_hf577e745__0__Slow \
 
 # Generated support classes, fast-path, compile with highest optimization
 VM_SUPPORT_FAST += \
 
 # Generated support classes, non-fast-path, compile with low/medium optimization
 VM_SUPPORT_SLOW += \
-	Vtest_aes_128__Syms \
+	Vaes_128__Syms \
 
 # Global classes, need linked once per executable, fast-path, compile with highest optimization
 VM_GLOBAL_FAST += \
