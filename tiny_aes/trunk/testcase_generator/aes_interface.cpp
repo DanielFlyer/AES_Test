@@ -1,19 +1,21 @@
 #include <stdlib.h>
 #include <iostream>
-#include "../obj_dir/Vaes_128.h"
-#include "../obj_dir/Vaes_192.h"
-#include "../obj_dir/Vaes_256.h"
 #include "verilated.h"
+#include "../obj_dir/Vaes_128.h"
+//#include "../obj_dir/Vaes_192.h"
+//#include "../obj_dir/Vaes_256.h"
 
 typedef unsigned int word;
 
 int main(int argc, char **argv) {
+	  // Initialize Verilators variables
+	Verilated::commandArgs(argc, argv);
+	
+	std::cout << interface_128(0, 0);
 	return 0;
 }
 
 word interface_128(word state, word key){
-  // Initialize Verilators variables
-	Verilated::commandArgs(argc, argv);
 
 	// Create an instance of our module under test
 	Vaes_128 *aes_128 = new Vaes_128;
@@ -27,7 +29,7 @@ word interface_128(word state, word key){
 }
 
 
-word interface_192(word state, word key){
+/*word interface_192(word state, word key){
   // Initialize Verilators variables
 	Verilated::commandArgs(argc, argv);
 
@@ -56,3 +58,4 @@ word interface_256(word state, word key){
 	aes_256->clk = 0;
 	return aes_256->out;
 }
+*/
