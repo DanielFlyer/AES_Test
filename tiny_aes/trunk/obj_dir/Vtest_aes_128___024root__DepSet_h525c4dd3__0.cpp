@@ -167,10 +167,10 @@ VL_INLINE_OPT void Vtest_aes_128___024root___sequent__TOP__0(Vtest_aes_128___024
     vlSelf->test_aes_128__DOT__uut__DOT__a2__DOT__k3a 
         = (vlSelf->test_aes_128__DOT__uut__DOT__a2__DOT__v2 
            ^ vlSelf->test_aes_128__DOT__uut__DOT__k1[0U]);
-    vlSelf->test_aes_128__DOT__uut__DOT__k0[0U] = 0x9cf4f3cU;
-    vlSelf->test_aes_128__DOT__uut__DOT__k0[1U] = 0xabf71588U;
-    vlSelf->test_aes_128__DOT__uut__DOT__k0[2U] = 0x28aed2a6U;
-    vlSelf->test_aes_128__DOT__uut__DOT__k0[3U] = 0x2b7e1516U;
+    vlSelf->test_aes_128__DOT__uut__DOT__k0[0U] = vlSelf->key[0U];
+    vlSelf->test_aes_128__DOT__uut__DOT__k0[1U] = vlSelf->key[1U];
+    vlSelf->test_aes_128__DOT__uut__DOT__k0[2U] = vlSelf->key[2U];
+    vlSelf->test_aes_128__DOT__uut__DOT__k0[3U] = vlSelf->key[3U];
     vlSelf->test_aes_128__DOT__uut__DOT__k9[0U] = vlSelf->test_aes_128__DOT__uut__DOT__a9__DOT__k3b;
     vlSelf->test_aes_128__DOT__uut__DOT__k9[1U] = vlSelf->test_aes_128__DOT__uut__DOT__a9__DOT__k2b;
     vlSelf->test_aes_128__DOT__uut__DOT__k9[2U] = (IData)(
@@ -483,14 +483,16 @@ VL_INLINE_OPT void Vtest_aes_128___024root___sequent__TOP__3(Vtest_aes_128___024
     Vtest_aes_128__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtest_aes_128___024root___sequent__TOP__3\n"); );
     // Body
-    if (VL_LIKELY((0U != ((((0x196a0b32U ^ vlSelf->test_aes_128__DOT__out[0U]) 
-                            | (0xdc118597U ^ vlSelf->test_aes_128__DOT__out[1U])) 
-                           | (0x2dc09fbU ^ vlSelf->test_aes_128__DOT__out[2U])) 
-                          | (0x3925841dU ^ vlSelf->test_aes_128__DOT__out[3U]))))) {
-        VL_WRITEF("E\n");
-    } else {
+    if (VL_UNLIKELY((0U == ((((vlSelf->test_aes_128__DOT__out[0U] 
+                               ^ vlSelf->verify[0U]) 
+                              | (vlSelf->test_aes_128__DOT__out[1U] 
+                                 ^ vlSelf->verify[1U])) 
+                             | (vlSelf->test_aes_128__DOT__out[2U] 
+                                ^ vlSelf->verify[2U])) 
+                            | (vlSelf->test_aes_128__DOT__out[3U] 
+                               ^ vlSelf->verify[3U]))))) {
         VL_WRITEF("Good.\n");
-        VL_FINISH_MT("testbench/test_aes_128.v", 50, "");
+        VL_FINISH_MT("testbench/test_aes_128.v", 44, "");
     }
 }
 

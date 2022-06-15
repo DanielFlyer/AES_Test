@@ -85,6 +85,9 @@ VL_MODULE(Vtest_aes_128___024root) {
     struct {
         VL_IN8(clk,0,0);
         CData/*0:0*/ __Vclklast__TOP__clk;
+        VL_INW(state,127,0,4);
+        VL_INW(key,127,0,4);
+        VL_INW(verify,127,0,4);
         VlWide<4>/*127:0*/ test_aes_128__DOT__out;
         VlWide<4>/*127:0*/ test_aes_128__DOT__uut__DOT__s0;
         VlWide<4>/*127:0*/ test_aes_128__DOT__uut__DOT__k0;
@@ -144,11 +147,11 @@ VL_MODULE(Vtest_aes_128___024root) {
         IData/*31:0*/ test_aes_128__DOT__uut__DOT__a3__DOT__k3b;
         IData/*31:0*/ test_aes_128__DOT__uut__DOT__a3__DOT____Vcellinp__S4_0____pinNumber2;
         IData/*31:0*/ test_aes_128__DOT__uut__DOT__a4__DOT__v0;
+    };
+    struct {
         IData/*31:0*/ test_aes_128__DOT__uut__DOT__a4__DOT__v1;
         IData/*31:0*/ test_aes_128__DOT__uut__DOT__a4__DOT__v2;
         IData/*31:0*/ test_aes_128__DOT__uut__DOT__a4__DOT__k0a;
-    };
-    struct {
         IData/*31:0*/ test_aes_128__DOT__uut__DOT__a4__DOT__k1a;
         IData/*31:0*/ test_aes_128__DOT__uut__DOT__a4__DOT__k2a;
         IData/*31:0*/ test_aes_128__DOT__uut__DOT__a4__DOT__k3a;
@@ -210,11 +213,11 @@ VL_MODULE(Vtest_aes_128___024root) {
         IData/*31:0*/ test_aes_128__DOT__uut__DOT__a9__DOT__v2;
         IData/*31:0*/ test_aes_128__DOT__uut__DOT__a9__DOT__k0a;
         IData/*31:0*/ test_aes_128__DOT__uut__DOT__a9__DOT__k1a;
+    };
+    struct {
         IData/*31:0*/ test_aes_128__DOT__uut__DOT__a9__DOT__k2a;
         IData/*31:0*/ test_aes_128__DOT__uut__DOT__a9__DOT__k3a;
         IData/*31:0*/ test_aes_128__DOT__uut__DOT__a9__DOT__k0b;
-    };
-    struct {
         IData/*31:0*/ test_aes_128__DOT__uut__DOT__a9__DOT__k1b;
         IData/*31:0*/ test_aes_128__DOT__uut__DOT__a9__DOT__k2b;
         IData/*31:0*/ test_aes_128__DOT__uut__DOT__a9__DOT__k3b;
@@ -276,11 +279,11 @@ VL_MODULE(Vtest_aes_128___024root) {
         IData/*31:0*/ __Vchglast__TOP__test_aes_128__DOT__uut__DOT__r3__t2__DOT__t2__out;
         IData/*31:0*/ __Vchglast__TOP__test_aes_128__DOT__uut__DOT__r3__t2__DOT__t3__out;
         IData/*31:0*/ __Vchglast__TOP__test_aes_128__DOT__uut__DOT__r3__t3__DOT__t0__out;
+    };
+    struct {
         IData/*31:0*/ __Vchglast__TOP__test_aes_128__DOT__uut__DOT__r3__t3__DOT__t1__out;
         IData/*31:0*/ __Vchglast__TOP__test_aes_128__DOT__uut__DOT__r3__t3__DOT__t2__out;
         IData/*31:0*/ __Vchglast__TOP__test_aes_128__DOT__uut__DOT__r3__t3__DOT__t3__out;
-    };
-    struct {
         IData/*31:0*/ __Vchglast__TOP__test_aes_128__DOT__uut__DOT__r4__t0__DOT__t0__out;
         IData/*31:0*/ __Vchglast__TOP__test_aes_128__DOT__uut__DOT__r4__t0__DOT__t1__out;
         IData/*31:0*/ __Vchglast__TOP__test_aes_128__DOT__uut__DOT__r4__t0__DOT__t2__out;
@@ -342,11 +345,11 @@ VL_MODULE(Vtest_aes_128___024root) {
         IData/*31:0*/ __Vchglast__TOP__test_aes_128__DOT__uut__DOT__r7__t2__DOT__t2__out;
         IData/*31:0*/ __Vchglast__TOP__test_aes_128__DOT__uut__DOT__r7__t2__DOT__t3__out;
         IData/*31:0*/ __Vchglast__TOP__test_aes_128__DOT__uut__DOT__r7__t3__DOT__t0__out;
+    };
+    struct {
         IData/*31:0*/ __Vchglast__TOP__test_aes_128__DOT__uut__DOT__r7__t3__DOT__t1__out;
         IData/*31:0*/ __Vchglast__TOP__test_aes_128__DOT__uut__DOT__r7__t3__DOT__t2__out;
         IData/*31:0*/ __Vchglast__TOP__test_aes_128__DOT__uut__DOT__r7__t3__DOT__t3__out;
-    };
-    struct {
         IData/*31:0*/ __Vchglast__TOP__test_aes_128__DOT__uut__DOT__r8__t0__DOT__t0__out;
         IData/*31:0*/ __Vchglast__TOP__test_aes_128__DOT__uut__DOT__r8__t0__DOT__t1__out;
         IData/*31:0*/ __Vchglast__TOP__test_aes_128__DOT__uut__DOT__r8__t0__DOT__t2__out;

@@ -28,6 +28,9 @@ class Vtest_aes_128 VL_NOT_FINAL {
     // The application code writes and reads these signals to
     // propagate new values into/out from the Verilated model.
     VL_IN8(&clk,0,0);
+    VL_INW(&state,127,0,4);
+    VL_INW(&key,127,0,4);
+    VL_INW(&verify,127,0,4);
 
     // CELLS
     // Public to allow access to /* verilator public */ items.

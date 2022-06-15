@@ -12,66 +12,66 @@ word rand_word();
 void rand_word_array(word w[], int bit_num);
 void print_verilog_hex(word w[], int bit_num);
 
-int main() {
-    const int num_case = 5;
-    int bit_num;
-    int i;
-    word state[4];
-    word key[8];
+// int main() {
+//     const int num_case = 5;
+//     int bit_num;
+//     int i;
+//     word state[4];
+//     word key[8];
 
-    bit_num = 128;
-    printf("AES-%d test cases:\n\n", bit_num);
-    for(i=0; i<num_case; i++) {
-        rand_word_array(state, 128);
-        rand_word_array(key, bit_num);
-        printf("plaintext: ");
-        print_verilog_hex(state, 128);
-        printf("\n");
-        printf("key:       ");
-        print_verilog_hex(key, bit_num);
-        printf("\n");
-        encrypt_128_key_expand_inline_no_branch(state, key);
-        printf("ciphertext:");
-        print_verilog_hex(state, 128);
-        printf("\n\n");       
-    }
+//     bit_num = 128;
+//     printf("AES-%d test cases:\n\n", bit_num);
+//     for(i=0; i<num_case; i++) {
+//         rand_word_array(state, 128);
+//         rand_word_array(key, bit_num);
+//         printf("plaintext: ");
+//         print_verilog_hex(state, 128);
+//         printf("\n");
+//         printf("key:       ");
+//         print_verilog_hex(key, bit_num);
+//         printf("\n");
+//         encrypt_128_key_expand_inline_no_branch(state, key);
+//         printf("ciphertext:");
+//         print_verilog_hex(state, 128);
+//         printf("\n\n");       
+//     }
 
-    bit_num = 192;
-    printf("AES-%d test cases:\n\n", bit_num);
-    for(i=0; i<num_case; i++) {
-        rand_word_array(state, 128);
-        rand_word_array(key, bit_num);
-        printf("plaintext: ");
-        print_verilog_hex(state, 128);
-        printf("\n");
-        printf("key:       ");
-        print_verilog_hex(key, bit_num);
-        printf("\n");
-        encrypt_192_key_expand_inline_no_branch(state, key);
-        printf("ciphertext:");
-        print_verilog_hex(state, 128);
-        printf("\n\n");       
-    }
+//     bit_num = 192;
+//     printf("AES-%d test cases:\n\n", bit_num);
+//     for(i=0; i<num_case; i++) {
+//         rand_word_array(state, 128);
+//         rand_word_array(key, bit_num);
+//         printf("plaintext: ");
+//         print_verilog_hex(state, 128);
+//         printf("\n");
+//         printf("key:       ");
+//         print_verilog_hex(key, bit_num);
+//         printf("\n");
+//         encrypt_192_key_expand_inline_no_branch(state, key);
+//         printf("ciphertext:");
+//         print_verilog_hex(state, 128);
+//         printf("\n\n");       
+//     }
 
-    bit_num = 256;
-    printf("AES-%d test cases:\n\n", bit_num);
-    for(i=0; i<num_case; i++) {
-        rand_word_array(state, 128);
-        rand_word_array(key, bit_num);
-        printf("plaintext: ");
-        print_verilog_hex(state, 128);
-        printf("\n");
-        printf("key:       ");
-        print_verilog_hex(key, bit_num);
-        printf("\n");
-        encrypt_256_key_expand_inline_no_branch(state, key);
-        printf("ciphertext:");
-        print_verilog_hex(state, 128);
-        printf("\n\n");       
-    }
+//     bit_num = 256;
+//     printf("AES-%d test cases:\n\n", bit_num);
+//     for(i=0; i<num_case; i++) {
+//         rand_word_array(state, 128);
+//         rand_word_array(key, bit_num);
+//         printf("plaintext: ");
+//         print_verilog_hex(state, 128);
+//         printf("\n");
+//         printf("key:       ");
+//         print_verilog_hex(key, bit_num);
+//         printf("\n");
+//         encrypt_256_key_expand_inline_no_branch(state, key);
+//         printf("ciphertext:");
+//         print_verilog_hex(state, 128);
+//         printf("\n\n");       
+//     }
     
-    return 0;
-}
+//     return 0;
+// }
 
 word rand_word() {
     word w = 0;

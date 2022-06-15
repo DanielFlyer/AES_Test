@@ -157,10 +157,22 @@ VL_INLINE_OPT void Vtest_aes_128___024root___sequent__TOP__1(Vtest_aes_128___024
             << 0x18U) | (((IData)(vlSymsp->TOP__test_aes_128__DOT__uut__DOT__rf__DOT__S4_4__DOT__S_1.out) 
                           << 0x10U) | (((IData)(vlSymsp->TOP__test_aes_128__DOT__uut__DOT__rf__DOT__S4_4__DOT__S_2.out) 
                                         << 8U) | (IData)(vlSymsp->TOP__test_aes_128__DOT__uut__DOT__rf__DOT__S4_4__DOT__S_3.out))));
-    vlSelf->test_aes_128__DOT__uut__DOT__s0[0U] = 0xe9f84808U;
-    vlSelf->test_aes_128__DOT__uut__DOT__s0[1U] = 0x9ac68d2aU;
-    vlSelf->test_aes_128__DOT__uut__DOT__s0[2U] = 0xa0f4e22bU;
-    vlSelf->test_aes_128__DOT__uut__DOT__s0[3U] = 0x193de3beU;
+    vlSelf->test_aes_128__DOT__uut__DOT__s0[0U] = (
+                                                   vlSelf->state[0U] 
+                                                   ^ 
+                                                   vlSelf->key[0U]);
+    vlSelf->test_aes_128__DOT__uut__DOT__s0[1U] = (
+                                                   vlSelf->state[1U] 
+                                                   ^ 
+                                                   vlSelf->key[1U]);
+    vlSelf->test_aes_128__DOT__uut__DOT__s0[2U] = (
+                                                   vlSelf->state[2U] 
+                                                   ^ 
+                                                   vlSelf->key[2U]);
+    vlSelf->test_aes_128__DOT__uut__DOT__s0[3U] = (
+                                                   vlSelf->state[3U] 
+                                                   ^ 
+                                                   vlSelf->key[3U]);
     vlSelf->test_aes_128__DOT__uut__DOT__a1__DOT__k0b 
         = (vlSelf->test_aes_128__DOT__uut__DOT__a1__DOT__k0a 
            ^ test_aes_128__DOT__uut__DOT__a1__DOT__k4a);

@@ -10,6 +10,9 @@
 Vtest_aes_128::Vtest_aes_128(VerilatedContext* _vcontextp__, const char* _vcname__)
     : vlSymsp{new Vtest_aes_128__Syms(_vcontextp__, _vcname__, this)}
     , clk{vlSymsp->TOP.clk}
+    , state{vlSymsp->TOP.state}
+    , key{vlSymsp->TOP.key}
+    , verify{vlSymsp->TOP.verify}
     , __PVT__test_aes_128__DOT__uut__DOT__r1{vlSymsp->TOP.__PVT__test_aes_128__DOT__uut__DOT__r1}
     , __PVT__test_aes_128__DOT__uut__DOT__r2{vlSymsp->TOP.__PVT__test_aes_128__DOT__uut__DOT__r2}
     , __PVT__test_aes_128__DOT__uut__DOT__r3{vlSymsp->TOP.__PVT__test_aes_128__DOT__uut__DOT__r3}
