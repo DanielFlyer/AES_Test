@@ -18,8 +18,8 @@ module test_aes_128(clk);
 
 	// Inputs
 	input clk;
-	reg [127:0] state;
-	reg [127:0] key;
+	//reg [127:0] state;
+	//reg [127:0] key;
 
 	// Outputs
 	reg [127:0] out;
@@ -27,19 +27,27 @@ module test_aes_128(clk);
 	// Instantiate the Unit Under Test (UUT)
 	aes_128 uut (
 		.clk(clk), 
-		.state(state), 
-		.key(key), 
+		.state(128'h3243f6a8_885a308d_313198a2_e0370734), 
+		.key(128'h2b7e1516_28aed2a6_abf71588_09cf4f3c), 
 		.out(out)
 	);
 
  	initial begin
-		out = 0;
-		state = 128'h3243f6a8_885a308d_313198a2_e0370734;
-        key   = 128'h2b7e1516_28aed2a6_abf71588_09cf4f3c;
-		#1;
+		//state = 128'h3243f6a8_885a308d_313198a2_e0370734;
+        //key   = 128'h2b7e1516_28aed2a6_abf71588_09cf4f3c;
+		// if (out !== 128'h3925841d02dc09fbdc118597196a0b32)
+        //   	begin $display(out); $finish; end
+		// else begin
+		// $display("Good.");
+		// $finish;
+		// end
+	end
+	always @(negedge clk) begin
 		if (out !== 128'h3925841d02dc09fbdc118597196a0b32)
-          	begin $display("E"); $finish; end
+          	begin $display("E"); end
+		else begin
 		$display("Good.");
 		$finish;
+		end
 	end
 endmodule

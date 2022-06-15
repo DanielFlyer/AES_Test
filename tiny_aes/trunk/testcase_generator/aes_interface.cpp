@@ -10,22 +10,24 @@ typedef unsigned int word;
 int main(int argc, char **argv) {
 	  // Initialize Verilators variables
 	Verilated::commandArgs(argc, argv);
-	
-	std::cout << interface_128(0, 0);
+
 	return 0;
 }
 
-word interface_128(word state, word key){
+void interface_128(word state[], word key[]){
 
 	// Create an instance of our module under test
 	Vaes_128 *aes_128 = new Vaes_128;
 	
-	aes_128->state = state;
-	aes_128->key = key;
-	aes_128->clk = 1;
-	aes_128->eval();
-	aes_128->clk = 0;
-	return aes_128->out;
+	aes_128->state = {state[3], state[2], state[1], state[0]};
+	aes_128->key = {key[3], key[2], key[1], key[0]};
+	while(aes_128 -> out != ){
+		aes_128->clk = 1;
+		aes_128->eval();
+		aes_128->clk = 0;
+		aes_128->eval();
+	}
+	state = aes_128->out;
 }
 
 
