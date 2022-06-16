@@ -34,9 +34,7 @@ module test_aes_128(clk, state, key, verify);
 	);
 
  	initial begin
-		$display(state);
-		$display(key);
-		$display(verify);
+		out = 0;
 	end
 	always @(negedge clk) begin
 		if (out == verify) begin

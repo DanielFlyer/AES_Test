@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "aes_interface.cpp"
 
 typedef unsigned char byte;
 typedef unsigned int word;

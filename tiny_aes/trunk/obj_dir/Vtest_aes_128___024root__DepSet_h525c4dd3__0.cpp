@@ -492,7 +492,7 @@ VL_INLINE_OPT void Vtest_aes_128___024root___sequent__TOP__3(Vtest_aes_128___024
                             | (vlSelf->test_aes_128__DOT__out[3U] 
                                ^ vlSelf->verify[3U]))))) {
         VL_WRITEF("Good.\n");
-        VL_FINISH_MT("testbench/test_aes_128.v", 44, "");
+        VL_FINISH_MT("testbench/test_aes_128.v", 42, "");
     }
 }
 

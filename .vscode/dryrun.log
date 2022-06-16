@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/dflyer/AES_Test'
+make: Leaving directory '/home/dflyer/AES_Test'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+

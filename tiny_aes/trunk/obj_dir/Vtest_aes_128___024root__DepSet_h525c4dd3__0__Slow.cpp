@@ -11,8 +11,10 @@ VL_ATTR_COLD void Vtest_aes_128___024root___initial__TOP__0(Vtest_aes_128___024r
     Vtest_aes_128__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtest_aes_128___024root___initial__TOP__0\n"); );
     // Body
-    VL_WRITEF("%39#\n%39#\n%39#\n",128,vlSelf->state.data(),
-              128,vlSelf->key.data(),128,vlSelf->verify.data());
+    vlSelf->test_aes_128__DOT__out[0U] = 0U;
+    vlSelf->test_aes_128__DOT__out[1U] = 0U;
+    vlSelf->test_aes_128__DOT__out[2U] = 0U;
+    vlSelf->test_aes_128__DOT__out[3U] = 0U;
 }
 
 VL_ATTR_COLD void Vtest_aes_128___024root___eval_initial(Vtest_aes_128___024root* vlSelf) {
@@ -20,8 +22,8 @@ VL_ATTR_COLD void Vtest_aes_128___024root___eval_initial(Vtest_aes_128___024root
     Vtest_aes_128__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtest_aes_128___024root___eval_initial\n"); );
     // Body
-    Vtest_aes_128___024root___initial__TOP__0(vlSelf);
     vlSelf->__Vclklast__TOP__clk = vlSelf->clk;
+    Vtest_aes_128___024root___initial__TOP__0(vlSelf);
 }
 
 VL_ATTR_COLD void Vtest_aes_128___024root___final(Vtest_aes_128___024root* vlSelf) {

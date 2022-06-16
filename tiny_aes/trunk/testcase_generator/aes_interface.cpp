@@ -14,7 +14,7 @@ int main(int argc, char **argv) {
 	return 0;
 }
 
-void interface_128(word state[], word key[]){
+void interface_128(word state[], word key[], word[] out){
 
 	// Create an instance of our module under test
 	Vaes_128 *aes_128 = new Vaes_128;
