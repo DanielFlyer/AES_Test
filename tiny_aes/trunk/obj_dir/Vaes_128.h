@@ -12,9 +12,6 @@
 
 class Vaes_128__Syms;
 class Vaes_128___024root;
-class Vaes_128_one_round;
-class Vaes_128_S;
-
 
 // This class is the main interface to the Verilated model
 class Vaes_128 VL_NOT_FINAL {
@@ -35,71 +32,6 @@ class Vaes_128 VL_NOT_FINAL {
     // CELLS
     // Public to allow access to /* verilator public */ items.
     // Otherwise the application code can consider these internals.
-    Vaes_128_one_round* const __PVT__aes_128__DOT__r1;
-    Vaes_128_one_round* const __PVT__aes_128__DOT__r2;
-    Vaes_128_one_round* const __PVT__aes_128__DOT__r3;
-    Vaes_128_one_round* const __PVT__aes_128__DOT__r4;
-    Vaes_128_one_round* const __PVT__aes_128__DOT__r5;
-    Vaes_128_one_round* const __PVT__aes_128__DOT__r6;
-    Vaes_128_one_round* const __PVT__aes_128__DOT__r7;
-    Vaes_128_one_round* const __PVT__aes_128__DOT__r8;
-    Vaes_128_one_round* const __PVT__aes_128__DOT__r9;
-    Vaes_128_S* const __PVT__aes_128__DOT__a1__DOT__S4_0__DOT__S_0;
-    Vaes_128_S* const __PVT__aes_128__DOT__a1__DOT__S4_0__DOT__S_1;
-    Vaes_128_S* const __PVT__aes_128__DOT__a1__DOT__S4_0__DOT__S_2;
-    Vaes_128_S* const __PVT__aes_128__DOT__a1__DOT__S4_0__DOT__S_3;
-    Vaes_128_S* const __PVT__aes_128__DOT__a2__DOT__S4_0__DOT__S_0;
-    Vaes_128_S* const __PVT__aes_128__DOT__a2__DOT__S4_0__DOT__S_1;
-    Vaes_128_S* const __PVT__aes_128__DOT__a2__DOT__S4_0__DOT__S_2;
-    Vaes_128_S* const __PVT__aes_128__DOT__a2__DOT__S4_0__DOT__S_3;
-    Vaes_128_S* const __PVT__aes_128__DOT__a3__DOT__S4_0__DOT__S_0;
-    Vaes_128_S* const __PVT__aes_128__DOT__a3__DOT__S4_0__DOT__S_1;
-    Vaes_128_S* const __PVT__aes_128__DOT__a3__DOT__S4_0__DOT__S_2;
-    Vaes_128_S* const __PVT__aes_128__DOT__a3__DOT__S4_0__DOT__S_3;
-    Vaes_128_S* const __PVT__aes_128__DOT__a4__DOT__S4_0__DOT__S_0;
-    Vaes_128_S* const __PVT__aes_128__DOT__a4__DOT__S4_0__DOT__S_1;
-    Vaes_128_S* const __PVT__aes_128__DOT__a4__DOT__S4_0__DOT__S_2;
-    Vaes_128_S* const __PVT__aes_128__DOT__a4__DOT__S4_0__DOT__S_3;
-    Vaes_128_S* const __PVT__aes_128__DOT__a5__DOT__S4_0__DOT__S_0;
-    Vaes_128_S* const __PVT__aes_128__DOT__a5__DOT__S4_0__DOT__S_1;
-    Vaes_128_S* const __PVT__aes_128__DOT__a5__DOT__S4_0__DOT__S_2;
-    Vaes_128_S* const __PVT__aes_128__DOT__a5__DOT__S4_0__DOT__S_3;
-    Vaes_128_S* const __PVT__aes_128__DOT__a6__DOT__S4_0__DOT__S_0;
-    Vaes_128_S* const __PVT__aes_128__DOT__a6__DOT__S4_0__DOT__S_1;
-    Vaes_128_S* const __PVT__aes_128__DOT__a6__DOT__S4_0__DOT__S_2;
-    Vaes_128_S* const __PVT__aes_128__DOT__a6__DOT__S4_0__DOT__S_3;
-    Vaes_128_S* const __PVT__aes_128__DOT__a7__DOT__S4_0__DOT__S_0;
-    Vaes_128_S* const __PVT__aes_128__DOT__a7__DOT__S4_0__DOT__S_1;
-    Vaes_128_S* const __PVT__aes_128__DOT__a7__DOT__S4_0__DOT__S_2;
-    Vaes_128_S* const __PVT__aes_128__DOT__a7__DOT__S4_0__DOT__S_3;
-    Vaes_128_S* const __PVT__aes_128__DOT__a8__DOT__S4_0__DOT__S_0;
-    Vaes_128_S* const __PVT__aes_128__DOT__a8__DOT__S4_0__DOT__S_1;
-    Vaes_128_S* const __PVT__aes_128__DOT__a8__DOT__S4_0__DOT__S_2;
-    Vaes_128_S* const __PVT__aes_128__DOT__a8__DOT__S4_0__DOT__S_3;
-    Vaes_128_S* const __PVT__aes_128__DOT__a9__DOT__S4_0__DOT__S_0;
-    Vaes_128_S* const __PVT__aes_128__DOT__a9__DOT__S4_0__DOT__S_1;
-    Vaes_128_S* const __PVT__aes_128__DOT__a9__DOT__S4_0__DOT__S_2;
-    Vaes_128_S* const __PVT__aes_128__DOT__a9__DOT__S4_0__DOT__S_3;
-    Vaes_128_S* const __PVT__aes_128__DOT__a10__DOT__S4_0__DOT__S_0;
-    Vaes_128_S* const __PVT__aes_128__DOT__a10__DOT__S4_0__DOT__S_1;
-    Vaes_128_S* const __PVT__aes_128__DOT__a10__DOT__S4_0__DOT__S_2;
-    Vaes_128_S* const __PVT__aes_128__DOT__a10__DOT__S4_0__DOT__S_3;
-    Vaes_128_S* const __PVT__aes_128__DOT__rf__DOT__S4_1__DOT__S_0;
-    Vaes_128_S* const __PVT__aes_128__DOT__rf__DOT__S4_1__DOT__S_1;
-    Vaes_128_S* const __PVT__aes_128__DOT__rf__DOT__S4_1__DOT__S_2;
-    Vaes_128_S* const __PVT__aes_128__DOT__rf__DOT__S4_1__DOT__S_3;
-    Vaes_128_S* const __PVT__aes_128__DOT__rf__DOT__S4_2__DOT__S_0;
-    Vaes_128_S* const __PVT__aes_128__DOT__rf__DOT__S4_2__DOT__S_1;
-    Vaes_128_S* const __PVT__aes_128__DOT__rf__DOT__S4_2__DOT__S_2;
-    Vaes_128_S* const __PVT__aes_128__DOT__rf__DOT__S4_2__DOT__S_3;
-    Vaes_128_S* const __PVT__aes_128__DOT__rf__DOT__S4_3__DOT__S_0;
-    Vaes_128_S* const __PVT__aes_128__DOT__rf__DOT__S4_3__DOT__S_1;
-    Vaes_128_S* const __PVT__aes_128__DOT__rf__DOT__S4_3__DOT__S_2;
-    Vaes_128_S* const __PVT__aes_128__DOT__rf__DOT__S4_3__DOT__S_3;
-    Vaes_128_S* const __PVT__aes_128__DOT__rf__DOT__S4_4__DOT__S_0;
-    Vaes_128_S* const __PVT__aes_128__DOT__rf__DOT__S4_4__DOT__S_1;
-    Vaes_128_S* const __PVT__aes_128__DOT__rf__DOT__S4_4__DOT__S_2;
-    Vaes_128_S* const __PVT__aes_128__DOT__rf__DOT__S4_4__DOT__S_3;
 
     // Root instance pointer to allow access to model internals,
     // including inlined /* verilator public_flat_* */ items.

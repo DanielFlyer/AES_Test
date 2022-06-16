@@ -55,10 +55,8 @@ int main(int argc, char **argv) {
 	out[2] = REV(out[2]);
 	out[1] = REV(out[1]);
 	out[0] = REV(out[0]);
-	printf("out is %s\n", VL_TO_STRING(aes_128->out).c_str());
 	auto start2 = std::chrono::steady_clock::now();
-	while(aes_128->out != 0){
-		std::cout << "cycle";
+	for(int j = 0; j < 24; j++){
 		aes_128->clk = 1;
 		aes_128->eval();
 		aes_128->clk = 0;
