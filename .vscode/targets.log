@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Jun 23 10:35:49 2022
+# Make data base, printed on Thu Jun 23 11:46:27 2022
 
 # Variables
 
@@ -55,7 +55,7 @@ PATH = /home/dflyer/.vscode-server/bin/30d9c6cd9483b2cc586687151bcbcd635f373630/
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-a5e15045-6a05-45aa-8c5b-f6b936a5b3e1.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-45052aca-b681-431f-a356-6de1f8f984b2.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -215,6 +215,6 @@ GNUmakefile:
 # strcache performance: lookups = 16 / hit rate = 18%
 # hash-table stats:
 # Load=13/8192=0%, Rehash=0, Collisions=1/16=6%
-# Finished Make data base on Thu Jun 23 10:35:49 2022
+# Finished Make data base on Thu Jun 23 11:46:27 2022
 
  

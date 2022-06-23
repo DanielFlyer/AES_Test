@@ -43,7 +43,7 @@ int main(int argc, char **argv) {
     cTime += ((double) (end - start)) / CLOCKS_PER_SEC;
 
 	// printf("ciphertext:");
-    // print_verilog_hex(out, 128);
+    print_verilog_hex(out, 128);
     // printf("\n");
 
 
@@ -67,6 +67,11 @@ int main(int argc, char **argv) {
 	}
 	end = clock();
     verilatorTime += ((double) (end - start)) / CLOCKS_PER_SEC;
+	std::cout << aes_128->out << std::endl;
+	// if(out[3] != aes_128->out){
+	// 	std::cout << "E"<< std::endl;
+	// }
+
 	}
 	std::cout << "Time taken by C Implementation: "
           << cTime << " seconds" << std::endl;	
