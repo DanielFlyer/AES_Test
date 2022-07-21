@@ -9,6 +9,8 @@
 typedef unsigned int word;
 double verilatorTime;
 double cTime;
+double verilatorTime2;
+double cTime2;
 
 void encrypt_128_key_expand_inline_no_branch(word state[], word key[]);
 void convert_verilog_hex(word w[], int bit_num);
@@ -18,6 +20,8 @@ int main(int argc, char **argv) {
 	Verilated::commandArgs(argc, argv);
     verilatorTime = 0;
     cTime = 0;
+	verilatorTime2 = 0;
+    cTime2 = 0;
 
 	for(int i = 0; i < atoi(argv[1]); i++){
 	//Generate test case
@@ -39,11 +43,15 @@ int main(int argc, char **argv) {
 	//C Implementation 
 	start = clock();
 	encrypt_128_key_expand_inline_no_branch(out, key);
+	encrypt_128_key_expand_inline_no_branch(out, key);
+	encrypt_128_key_expand_inline_no_branch(out, key);
+	encrypt_128_key_expand_inline_no_branch(out, key);
+	encrypt_128_key_expand_inline_no_branch(out, key);
 	end = clock();
     cTime += ((double) (end - start)) / CLOCKS_PER_SEC;
 
 	// printf("ciphertext:");
-    print_verilog_hex(out, 128);
+    //print_verilog_hex(out, 128);
     // printf("\n");
 
 
@@ -65,19 +73,130 @@ int main(int argc, char **argv) {
 		aes_128->clk = 0;
 		aes_128->eval();
 	}
+	for(int j = 0; j < 24; j++){
+		aes_128->clk = 1;
+		aes_128->eval();
+		aes_128->clk = 0;
+		aes_128->eval();
+	}
+	for(int j = 0; j < 24; j++){
+		aes_128->clk = 1;
+		aes_128->eval();
+		aes_128->clk = 0;
+		aes_128->eval();
+	}
+	for(int j = 0; j < 24; j++){
+		aes_128->clk = 1;
+		aes_128->eval();
+		aes_128->clk = 0;
+		aes_128->eval();
+	}
+	for(int j = 0; j < 24; j++){
+		aes_128->clk = 1;
+		aes_128->eval();
+		aes_128->clk = 0;
+		aes_128->eval();
+	}
 	end = clock();
     verilatorTime += ((double) (end - start)) / CLOCKS_PER_SEC;
-	std::cout << aes_128->out << std::endl;
+
+		//C Implementation 
+	start = clock();
+	encrypt_128_key_expand_inline_no_branch(out, key);
+	encrypt_128_key_expand_inline_no_branch(out, key);
+	encrypt_128_key_expand_inline_no_branch(out, key);
+	encrypt_128_key_expand_inline_no_branch(out, key);
+	encrypt_128_key_expand_inline_no_branch(out, key);
+	encrypt_128_key_expand_inline_no_branch(out, key);
+	encrypt_128_key_expand_inline_no_branch(out, key);
+	encrypt_128_key_expand_inline_no_branch(out, key);
+	encrypt_128_key_expand_inline_no_branch(out, key);
+	encrypt_128_key_expand_inline_no_branch(out, key);
+	end = clock();
+    cTime2 += ((double) (end - start)) / CLOCKS_PER_SEC;
+
+	// printf("ciphertext:");
+    //print_verilog_hex(out, 128);
+    // printf("\n");
+
+
+	//Verilator simulation
+
+	//Create an instance of our module under test
+	start = clock();
+	for(int j = 0; j < 24; j++){
+		aes_128->clk = 1;
+		aes_128->eval();
+		aes_128->clk = 0;
+		aes_128->eval();
+	}
+	for(int j = 0; j < 24; j++){
+		aes_128->clk = 1;
+		aes_128->eval();
+		aes_128->clk = 0;
+		aes_128->eval();
+	}
+	for(int j = 0; j < 24; j++){
+		aes_128->clk = 1;
+		aes_128->eval();
+		aes_128->clk = 0;
+		aes_128->eval();
+	}
+	for(int j = 0; j < 24; j++){
+		aes_128->clk = 1;
+		aes_128->eval();
+		aes_128->clk = 0;
+		aes_128->eval();
+	}
+	for(int j = 0; j < 24; j++){
+		aes_128->clk = 1;
+		aes_128->eval();
+		aes_128->clk = 0;
+		aes_128->eval();
+	}
+	for(int j = 0; j < 24; j++){
+		aes_128->clk = 1;
+		aes_128->eval();
+		aes_128->clk = 0;
+		aes_128->eval();
+	}
+	for(int j = 0; j < 24; j++){
+		aes_128->clk = 1;
+		aes_128->eval();
+		aes_128->clk = 0;
+		aes_128->eval();
+	}
+	for(int j = 0; j < 24; j++){
+		aes_128->clk = 1;
+		aes_128->eval();
+		aes_128->clk = 0;
+		aes_128->eval();
+	}
+	for(int j = 0; j < 24; j++){
+		aes_128->clk = 1;
+		aes_128->eval();
+		aes_128->clk = 0;
+		aes_128->eval();
+	}
+	for(int j = 0; j < 24; j++){
+		aes_128->clk = 1;
+		aes_128->eval();
+		aes_128->clk = 0;
+		aes_128->eval();
+	}
+	end = clock();
+    verilatorTime2 += ((double) (end - start)) / CLOCKS_PER_SEC;
+	//std::cout << aes_128->out << std::endl;
 	// if(out[3] != aes_128->out){
 	// 	std::cout << "E"<< std::endl;
 	// }
 
 	}
-	std::cout << "Time taken by C Implementation: "
-          << cTime << " seconds" << std::endl;	
-	std::cout << "Time taken by Verilator Simulation: "
-         << verilatorTime << " seconds" << std::endl;
-	std::cout << 100 * (verilatorTime - cTime) / cTime << "% time save\n";
+	// std::cout << "Time taken by C Implementation: "
+    //       << cTime << " seconds" << std::endl;	
+	// std::cout << "Time taken by Verilator Simulation: "
+    //      << verilatorTime << " seconds" << std::endl;
+	// std::cout << 100 * (verilatorTime - cTime) / cTime << "% time save\n";
 
 	exit(EXIT_SUCCESS);
 }

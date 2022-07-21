@@ -116,18 +116,18 @@ void encrypt_128_key_expand_inline(word state[], word key[]) {
 void encrypt_128_key_expand_inline_no_branch(word state[], word key[]) {
     int nr = 10;
     int i;
-    word k0 = key[0], k1 = key[1], k2 = key[2], k3 = key[3];
+    volatile word k0 = key[0], k1 = key[1], k2 = key[2], k3 = key[3];
     state[0] ^= k0;
     state[1] ^= k1;
     state[2] ^= k2;
     state[3] ^= k3;
-    word *t0 = (word *)table_0;
-    word p0, p1, p2, p3;
-    byte *b;
-    byte rcon = 1;
+    volatile word *t0 = (word *)table_0;
+    volatile word p0, p1, p2, p3;
+    volatile byte *b;
+    volatile byte rcon = 1;
 
     for(i=1; i<nr; i++) {
-        word temp = k3;
+        volatile word temp = k3;
         rot_down_8(temp);
         sub_byte(temp);
         temp ^= rcon;
@@ -152,7 +152,7 @@ void encrypt_128_key_expand_inline_no_branch(word state[], word key[]) {
         state[2] = z2 ^ p1;
         state[3] = z3 ^ p0;
     }
-    word temp = k3;
+    volatile word temp = k3;
     rot_down_8(temp);
     sub_byte(temp);
     temp ^= rcon;

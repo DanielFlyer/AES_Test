@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Jun 23 11:46:27 2022
+# Make data base, printed on Thu Jul 21 15:41:25 2022
 
 # Variables
 
@@ -20,8 +20,6 @@ make: *** No rule to make target 'all'.  Stop.
 WSLENV = VSCODE_WSL_EXT_LOCATION/up
 # default
 .SHELLFLAGS := -c
-# environment
-VSCODE_LOG_NATIVE = false
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # automatic
@@ -35,7 +33,7 @@ SHELL = /bin/sh
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{}}
 # environment
-_ = /home/dflyer/.vscode-server/bin/30d9c6cd9483b2cc586687151bcbcd635f373630/node
+_ = /home/dflyer/.vscode-server/bin/3b889b090b5ad5793f524b5d1d39fda662b96a2a/node
 # makefile
 MAKEFILE_LIST := 
 # 'override' directive
@@ -43,19 +41,17 @@ GNUMAKEFLAGS :=
 # environment
 XDG_DATA_DIRS = /usr/local/share:/usr/share:/var/lib/snapd/desktop
 # environment
-VSCODE_VERBOSE_LOGGING = true
-# environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
 VSCODE_CWD = /mnt/c/Users/Daniel/AppData/Local/Programs/Microsoft VS Code
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /home/dflyer/.vscode-server/bin/30d9c6cd9483b2cc586687151bcbcd635f373630/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Java/jdk-11.0.2/bin:/mnt/c/Program Files/AdoptOpenJDK/jdk-14.0.2.12-hotspot/bin:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/MATLAB/R2021b/bin:/mnt/c/Program Files/MATLAB/R2021a/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Wolfram Research/WolframScript/:/mnt/c/Program Files/PuTTY/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/c/Users/Daniel/AppData/Local/Microsoft/WindowsApps:/mnt/c/iverilog/bin:/mnt/c/iverilog/gtkwave/bin:/mnt/c/Users/Daniel/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin
+PATH = /home/dflyer/.vscode-server/bin/3b889b090b5ad5793f524b5d1d39fda662b96a2a/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Java/jdk-11.0.2/bin:/mnt/c/Program Files/AdoptOpenJDK/jdk-14.0.2.12-hotspot/bin:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/MATLAB/R2021b/bin:/mnt/c/Program Files/MATLAB/R2021a/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Wolfram Research/WolframScript/:/mnt/c/Program Files/PuTTY/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/c/Users/Daniel/AppData/Local/Microsoft/WindowsApps:/mnt/c/iverilog/bin:/mnt/c/iverilog/gtkwave/bin:/mnt/c/Users/Daniel/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin
 # environment
-VSCODE_LOG_STACK = false
+ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-45052aca-b681-431f-a356-6de1f8f984b2.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-498e50c9-a021-4285-8786-19eb303cbb17.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -63,13 +59,11 @@ LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_PIPE_LOGGING = true
-# environment
 PWD = /home/dflyer/AES_Test
 # default
 .LOADED := 
 # environment
-WSL_INTEROP = /run/WSL/11_interop
+WSL_INTEROP = /run/WSL/19829_interop
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -143,13 +137,11 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_EXTHOST_WILL_SEND_SOCKET = true
-# environment
 WSL_DISTRO_NAME = Ubuntu
 # environment
 MOTD_SHOWN = update-motd
 # variable set hash-table stats:
-# Load=68/1024=7%, Rehash=0, Collisions=4/90=4%
+# Load=64/1024=6%, Rehash=0, Collisions=4/86=5%
 
 # Pattern-specific Variable Values
 
@@ -215,6 +207,6 @@ GNUmakefile:
 # strcache performance: lookups = 16 / hit rate = 18%
 # hash-table stats:
 # Load=13/8192=0%, Rehash=0, Collisions=1/16=6%
-# Finished Make data base on Thu Jun 23 11:46:27 2022
+# Finished Make data base on Thu Jul 21 15:41:25 2022
 
  
