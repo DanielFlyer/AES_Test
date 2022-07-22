@@ -177,11 +177,11 @@ void encrypt_128_key_expand_inline_no_branch(word state[], word key[]) {
 
 void encrypt_192_key_expand_inline_no_branch(word state[], word key[]) {
     int i = 1, j;
-    word *t0 = (word *)table_0;
-    word k0 = key[0], k1 = key[1], k2 = key[2], k3 = key[3], k4 = key[4], k5 = key[5];
-    word p0, p1, p2, p3, z0, z1, z2, z3, temp;
-    byte *a = (byte *)state, *b, *t = table_0;
-    byte rcon = 1;
+    volatile word *t0 = (word *)table_0;
+    volatile word k0 = key[0], k1 = key[1], k2 = key[2], k3 = key[3], k4 = key[4], k5 = key[5];
+    volatile word p0, p1, p2, p3, z0, z1, z2, z3, temp;
+    volatile byte *a = (byte *)state, *b, *t = table_0;
+    volatile byte rcon = 1;
 
     state[0] ^= k0; state[1] ^= k1; state[2] ^= k2; state[3] ^= k3;
 
@@ -302,12 +302,12 @@ a:      temp = k5;
 
 void encrypt_256_key_expand_inline_no_branch(word state[], word key[]) {
     int i=1, j;
-    word *t0 = (word *)table_0;
-    word k0 = key[0], k1 = key[1], k2 = key[2], k3 = key[3],
+    volatile word *t0 = (word *)table_0;
+    volatile word k0 = key[0], k1 = key[1], k2 = key[2], k3 = key[3],
          k4 = key[4], k5 = key[5], k6 = key[6], k7 = key[7];
-    word p0, p1, p2, p3, z0, z1, z2, z3, temp;
-    byte *a = (byte *)state, *b, *t = table_0;
-    byte rcon = 1;
+    volatile word p0, p1, p2, p3, z0, z1, z2, z3, temp;
+    volatile byte *a = (byte *)state, *b, *t = table_0;
+    volatile byte rcon = 1;
 
     state[0] ^= k0; state[1] ^= k1; state[2] ^= k2; state[3] ^= k3;
 
