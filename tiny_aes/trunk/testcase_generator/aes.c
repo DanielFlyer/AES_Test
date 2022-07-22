@@ -58,20 +58,20 @@ typedef unsigned int word;
 }
 
 void encrypt_128_key_expand_inline(word state[], word key[]) {
-    int nr = 10;
-    int i;
-    word k0 = key[0], k1 = key[1], k2 = key[2], k3 = key[3];
+    volatile int nr = 10;
+    volatile int i;
+    volatile word k0 = key[0], k1 = key[1], k2 = key[2], k3 = key[3];
     state[0] ^= k0;
     state[1] ^= k1;
     state[2] ^= k2;
     state[3] ^= k3;
-    word *t0 = (word *)table_0;
-    word y, p0, p1, p2, p3;
-    byte *b = (byte *)&y;
-    byte rcon = 1;
+    volatile word *t0 = (word *)table_0;
+    volatile word y, p0, p1, p2, p3;
+    volatile byte *b = (byte *)&y;
+    volatile byte rcon = 1;
 
     for(i=1; i<=nr; i++) {
-        word temp = k3;
+        volatile word temp = k3;
         rot_down_8(temp);
         sub_byte(temp);
         temp ^= rcon;

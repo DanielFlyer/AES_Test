@@ -5,7 +5,7 @@ c2Total = 0
 v1Total = 0
 v2Total = 0
 for i in range(50):
-    result = subprocess.run(["./obj_dir/Vaes_256", "10000"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+    result = subprocess.run(["./obj_dir/Vaes_128", "10000"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
     s = result.stdout
     temp = [float(f) for f in s.split(' ')]
     c1 = temp[0]
